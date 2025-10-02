@@ -1,0 +1,84 @@
+.contacts__logo {
+  width: 296px;
+  height: 33px;
+}
+
+$primari-color: #2b7bc6;
+
+%decoration {
+  color: $primari-color;
+  font-size: 14px;
+  position: relative;
+  padding-bottom: 2.5px;
+  border-bottom: 1px dashed $primari-color;
+}
+
+.contacts {
+  padding: 0 190px;
+  padding-top: 45px;
+  padding-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #e1eefb;
+
+  &__location {
+    @extend %decoration;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 13px;
+      background-image: url("../../img/location.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      position: absolute;
+      left: -18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 41px;
+  }
+
+  &__tel {
+    color: black;
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  &__recall {
+    @extend %decoration;
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-image: url("../../img/arrow_down.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      position: absolute;
+      left: -29px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    font-size: 14px;
+    color: $primari-color;
+  }
+}
