@@ -4,6 +4,7 @@
 }
 
 $primari-color: #2b7bc6;
+$primary-bgk: #e1eefb;
 
 %decoration {
   color: $primari-color;
@@ -21,7 +22,7 @@ $primari-color: #2b7bc6;
   justify-content: space-between;
   align-items: center;
 
-  background-color: #e1eefb;
+  background-color: $primary-bgk;
 
   &__location {
     @extend %decoration;
@@ -80,5 +81,53 @@ $primari-color: #2b7bc6;
 
     font-size: 14px;
     color: $primari-color;
+  }
+}
+
+
+.menu{
+  background-color: $primary-bgk;
+  padding: 20px 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu__list {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 15%;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu__item {
+  padding: 20px 24px;
+
+  &:nth-child(1) {
+    background-color: #004c93;
+    padding-left: 70px;
+    position: relative;
+    &::before {
+      content: "";
+      background-image: url("../../img/burger.svg");
+      width: 18px;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      left: 24px;
+      transform: translateY( -50%);
+    }
+  }
+  &:nth-child(2) {
+    background-color: #1061ab;
+  }
+  &:nth-child(3) {
+    background-color: #2b7bc6;
   }
 }
