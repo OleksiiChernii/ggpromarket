@@ -214,28 +214,137 @@ $primary-bgk: #e1eefb;
 }
 
 .banner {
-  background-color: $primari-color;
-}
-
-.slider {
-  padding: 20px;
-  width: 1040px;
+  background: linear-gradient(to bottom, #e1eefb 50%, #f3f9ff 50%);
+  height: 380px;
+  padding: 0 190px;
+  color: white;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  &__button {
-    background-color: inherit;
-    border: none;
+  &__list {
+    flex-grow: 1;
+  }
 
-    &.back{
-      transform: rotate(180deg);
+  &__item {
+    height: 190px;
+    padding-top: 50px;
+    padding-left: 260px;
+    color: white;
+
+    &:first-child {
+      background-color: #1061ab;
+    }
+    &:last-child {
+      background-color: #3bb9b8;
     }
   }
 
-  &__wrapper{
-    flex-grow: 1;
+  &__head{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 15%;
+    text-transform: uppercase;
 
+    padding-bottom: 13px;
+  }
+  &__link{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 15%;
+  }
+}
+
+.slider {
+  padding: 20px;
+  flex-basis: 1040px;
+  height: 100%;
+  background-color: #004c93;
+
+  position: relative;
+
+  &__icon.back {
+    transform: rotate(180deg);
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.back {
+      left: 23px;
+    }
+
+    &.next {
+      right: 23px;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 76px;
+    right: 104px;
+  }
+
+  &__head {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 15%;
+    color: white;
+    width: 290px;
+  }
+
+  &__paragraph {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: white;
+
+    margin-top: 13px;
+    margin-bottom: 31px;
+  }
+
+  &__more {
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 15%;
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 14px 24px;
+    border: none;
+    background-color: #ffd600;
+    border-radius: 5px;
+  }
+
+  &__switcher {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    & .switcher__button {
+      border: none;
+      width: 10px;
+      height: 10px;
+      background-color: #9da4a8;
+      border-radius: 50%;
+    }
   }
 }

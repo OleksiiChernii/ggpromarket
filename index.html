@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GGPromarket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -79,29 +85,107 @@
       <article class="banner">
         <div class="slider">
           <button type="button" class="slider__button back">
-            <svg width="21" height="36">
+            <svg class="slider__icon back" width="21" height="36">
               <use href="./img/arrow.svg" />
             </svg>
           </button>
           <div class="slider__wrapper">
-            <h2 class="slider__head">сместитель raiber</h2>
+            <h2 class="slider__head">сместители raiber</h2>
             <p class="slider__paragraph">уже в наличии</p>
-            <button class="slider__more" type="button">подробнее</button>
+            <button class="slider__more" type="button">докладніше</button>
           </div>
 
-          <button type="button" class="slider__button">
-            <svg width="21" height="36">
+          <button type="button" class="slider__button next">
+            <svg class="slider__icon" width="21" height="36">
               <use href="./img/arrow.svg" />
             </svg>
           </button>
+          <ul class="slider__switcher">
+            <li class="switcher__item">
+              <button class="switcher__button"></button>
+            </li>
+            <li class="switcher__item">
+              <button class="switcher__button"></button>
+            </li>
+            <li class="switcher__item">
+              <button class="switcher__button"></button>
+            </li>
+            <li class="switcher__item">
+              <button class="switcher__button"></button>
+            </li>
+            <li class="switcher__item">
+              <button class="switcher__button"></button>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
+        <ul class="banner__list">
+          <li class="banner__item">
+            <h3 class="banner__head">Унітази <br />до 10000 грн</h3>
+            <a class="banner__link" href="">докладніше</a>
+          </li>
+          <li class="banner__item">
+            <h3 class="banner__head">Товари <br />зі знижкою</h3>
+            <a class="banner__link" href="">докладніше</a>
+          </li>
         </ul>
       </article>
     </header>
-    <main class="container"></main>
+    <main class="container">
+      <section class="collection">
+        <h2 class="collection__head">Колекції плитки</h2>
+        <ul class="collection__list">
+          <li class="collection__item">
+            <div class="thumb">
+              <img src="./img/glow.png" width="762" alt="Kerama Marazzi" />
+              <p class="collection__name">Glow</p>
+              <p class="collection__desc">Kerama Marazzi</p>
+            </div>
+          </li>
+          <li class="collection__item sublist">
+            <ul class="collection__sublist">
+              <li class="collection__subitem">
+                <div class="thumb">
+                  <img src="./img/westwind.png" width="500" alt="LB-Ceramics" />
+                  <p class="collection__name">Вествінд</p>
+                  <p class="collection__desc">LB-Ceramics</p>
+                </div>
+              </li>
+              <li class="collection__subitem">
+                <div class="thumb">
+                  <img
+                    src="./img/rotterdam.png"
+                    width="240"
+                    alt="gracia ceramica"
+                  />
+                  <p class="collection__name">Rotterdam</p>
+                  <p class="collection__desc">Gracia Ceramica</p>
+                </div>
+              </li>
+            </ul>
+            <ul class="collection__sublist">
+              <li class="collection__subitem">
+                <div class="thumb">
+                  <img src="./img/rane.png" width="240" alt="alma ceramica" />
+                  <p class="collection__name">Rane</p>
+                  <p class="collection__desc">Alma Ceramica</p>
+                </div>
+              </li>
+              <li class="collection__subitem">
+                <div class="thumb">
+                  <img
+                    src="./img/ginardo.png"
+                    width="500"
+                    alt="karama marazzi"
+                  />
+                  <p class="collection__name">Гинардо</p>
+                  <p class="collection__desc">Karama Marazzi</p>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </main>
     <footer class="container"></footer>
   </body>
 </html>
