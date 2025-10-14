@@ -339,8 +339,17 @@ li {
   gap: 18px;
 }
 
+.seller__head, .collection__head {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-decoration: underline;
+  text-decoration-color: #1061ab;
+  padding-bottom: 42px;
+}
+
 .collection {
-  padding: 0 190px;
+  padding: 50px 190px;
   background-color: #f3f9ff;
 }
 .collection__list {
@@ -359,16 +368,6 @@ li {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
-  position: relative;
-}
-.collection__head {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-decoration: underline;
-  text-decoration-color: #1061ab;
-  padding-bottom: 42px;
-  padding-top: 54px;
   position: relative;
 }
 .collection__name {
@@ -390,4 +389,30 @@ li {
   font-weight: 500;
   line-height: 24px;
   color: white;
+}
+
+.seller {
+  padding: 0 190px;
+  background-color: #f3f9ff;
+}
+.seller__list {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+.seller__button {
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  color: #2b7bc6;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 6px 16px;
+}
+.seller__button.active {
+  color: white;
+  background-color: #3bb9b8;
 }
