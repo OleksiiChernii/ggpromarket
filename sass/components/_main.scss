@@ -11,6 +11,8 @@
   line-height: 36px;
   text-decoration: underline;
   text-decoration-color: #1061ab;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
   padding-bottom: 42px;
 }
 
@@ -79,6 +81,32 @@ $prime-background: #f3f9ff;
   }
 }
 
+%buttons__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+%button__item {
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  color: #2b7bc6;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+
+  padding: 6px 16px;
+
+  &.active {
+    color: white;
+    background-color: #3bb9b8;
+  }
+}
+
 .seller {
   padding: 40px 190px;
   background-color: $prime-background;
@@ -88,33 +116,16 @@ $prime-background: #f3f9ff;
   }
 
   &__list {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 30px;
+    @extend %buttons__list;
   }
 
   &__button {
-    border: none;
-    border-radius: 4px;
-    background-color: white;
-    color: #2b7bc6;
-
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-
-    padding: 6px 16px;
-
-    &.active {
-      color: white;
-      background-color: #3bb9b8;
-    }
+    @extend %button__item;
   }
 }
 
-.seller__cards {
+.seller__cards,
+.sale__cards {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -293,5 +304,45 @@ $prime-background: #f3f9ff;
     font-size: 12px;
     line-height: 14px;
     font-weight: 500;
+  }
+}
+
+.sale {
+  padding: 52px 190px 40px;
+  background-color: #eaf4ff;
+  &__head {
+    @extend %head;
+  }
+
+  &__list {
+    @extend %buttons__list;
+  }
+
+  &__button {
+    @extend %button__item;
+  }
+}
+
+.brands {
+  padding: 50px 190px;
+  background-color: $prime-background;
+  &__head {
+    @extend %head;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 240px;
+    height: 132px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

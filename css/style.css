@@ -342,12 +342,14 @@ li {
   gap: 18px;
 }
 
-.seller__head, .collection__head {
+.brands__head, .sale__head, .seller__head, .collection__head {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-decoration: underline;
   text-decoration-color: #1061ab;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
   padding-bottom: 42px;
 }
 
@@ -394,18 +396,15 @@ li {
   color: white;
 }
 
-.seller {
-  padding: 40px 190px;
-  background-color: #f3f9ff;
-}
-.seller__list {
+.sale__list, .seller__list {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
   padding-bottom: 30px;
 }
-.seller__button {
+
+.sale__button, .seller__button {
   border: none;
   border-radius: 4px;
   background-color: white;
@@ -415,41 +414,52 @@ li {
   line-height: 24px;
   padding: 6px 16px;
 }
-.seller__button.active {
+.active.sale__button, .active.seller__button {
   color: white;
   background-color: #3bb9b8;
 }
 
-.seller__cards {
+.seller {
+  padding: 40px 190px;
+  background-color: #f3f9ff;
+}
+.seller__cards,
+.sale__cards {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.seller__cards .card__item {
+.seller__cards .card__item,
+.sale__cards .card__item {
   width: 308px;
   height: 540px;
   background-color: white;
   padding: 10px;
   padding-bottom: 47px;
 }
-.seller__cards .card__item:not(:last-child) {
+.seller__cards .card__item:not(:last-child),
+.sale__cards .card__item:not(:last-child) {
   border-right: 1px solid #e8e9e9;
 }
-.seller__cards .card__item:hover .thumb::after {
+.seller__cards .card__item:hover .thumb::after,
+.sale__cards .card__item:hover .thumb::after {
   bottom: 50%;
   transform: translateY(50%);
 }
-.seller__cards .card__item:hover .card__button {
+.seller__cards .card__item:hover .card__button,
+.sale__cards .card__item:hover .card__button {
   color: white;
   background-color: #2b7bc6;
 }
-.seller__cards .thumb {
+.seller__cards .thumb,
+.sale__cards .thumb {
   width: 288px;
   height: 288px;
   position: relative;
   overflow: hidden;
 }
-.seller__cards .thumb::after {
+.seller__cards .thumb::after,
+.sale__cards .thumb::after {
   content: "Швидкий перегляд";
   text-align: center;
   width: 100%;
@@ -464,7 +474,8 @@ li {
   transform: translateY(100%);
   transition: transform 0.1s linear 0.3s, bottom 0.3s linear;
 }
-.seller__cards .card__hit {
+.seller__cards .card__hit,
+.sale__cards .card__hit {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -472,7 +483,8 @@ li {
   align-items: center;
   justify-content: flex-start;
 }
-.seller__cards .card__hit .hit__desc {
+.seller__cards .card__hit .hit__desc,
+.sale__cards .card__hit .hit__desc {
   background-color: #ffd600;
   color: black;
   font-size: 12px;
@@ -481,7 +493,8 @@ li {
   text-transform: uppercase;
   padding: 3px 10px;
 }
-.seller__cards .card__hit .hit__sale {
+.seller__cards .card__hit .hit__sale,
+.sale__cards .card__hit .hit__sale {
   background-color: #ea1649;
   color: white;
   font-size: 12px;
@@ -490,13 +503,15 @@ li {
   text-transform: uppercase;
   padding: 3px 10px;
 }
-.seller__cards .card__img {
+.seller__cards .card__img,
+.sale__cards .card__img {
   display: block;
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.seller__cards .card__desc {
+.seller__cards .card__desc,
+.sale__cards .card__desc {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
@@ -505,25 +520,29 @@ li {
   height: 72px;
   overflow-y: hidden;
 }
-.seller__cards .card__made {
+.seller__cards .card__made,
+.sale__cards .card__made {
   padding: 16px 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
 }
-.seller__cards .wrapper {
+.seller__cards .wrapper,
+.sale__cards .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
   position: relative;
 }
-.seller__cards .card__price {
+.seller__cards .card__price,
+.sale__cards .card__price {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
 }
-.seller__cards .card__sale {
+.seller__cards .card__sale,
+.sale__cards .card__sale {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -534,7 +553,8 @@ li {
   left: 10;
   transform: translateY(100%);
 }
-.seller__cards .card__button {
+.seller__cards .card__button,
+.sale__cards .card__button {
   border: 1px solid #2b7bc6;
   border-radius: 4px;
   background-color: transparent;
@@ -542,7 +562,8 @@ li {
   color: #2b7bc6;
   padding: 6px 12px;
 }
-.seller__cards .rating {
+.seller__cards .rating,
+.sale__cards .rating {
   padding-top: 20px;
   padding-left: 10px;
   display: flex;
@@ -550,29 +571,58 @@ li {
   justify-content: start;
   gap: 8px;
 }
-.seller__cards .stars__list {
+.seller__cards .stars__list,
+.sale__cards .stars__list {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
 }
-.seller__cards .stars__item {
+.seller__cards .stars__item,
+.sale__cards .stars__item {
   width: 14px;
   height: 13px;
   mask: url("../../img/starr.svg") no-repeat center/contain;
   background-color: #ffd600;
 }
-.seller__cards .stars__item.half {
+.seller__cards .stars__item.half,
+.sale__cards .stars__item.half {
   background: linear-gradient(to right, #ffd600 50%, #ccc 50%);
 }
-.seller__cards .comment__link {
+.seller__cards .comment__link,
+.sale__cards .comment__link {
   width: 13px;
   height: 13px;
   display: block;
   background-image: url("../../img/comment.svg");
 }
-.seller__cards .comment__count {
+.seller__cards .comment__count,
+.sale__cards .comment__count {
   font-size: 12px;
   line-height: 14px;
   font-weight: 500;
+}
+
+.sale {
+  padding: 52px 190px 40px;
+  background-color: #eaf4ff;
+}
+.brands {
+  padding: 50px 190px;
+  background-color: #f3f9ff;
+}
+.brands__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.brands__item {
+  width: 240px;
+  height: 132px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
