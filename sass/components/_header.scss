@@ -187,7 +187,10 @@ $primary-bgk: #e1eefb;
 
     &.marker::after {
       content: "4";
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
       width: 22px;
       height: 22px;
 
