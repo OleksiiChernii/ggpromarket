@@ -582,7 +582,7 @@ li {
 .sale__cards .stars__item {
   width: 14px;
   height: 13px;
-  mask: url("../../img/starr.svg") no-repeat center/contain;
+  mask: url("../img/starr.svg") no-repeat center/contain;
   background-color: #ffd600;
 }
 .seller__cards .stars__item.half,
@@ -594,7 +594,7 @@ li {
   width: 13px;
   height: 13px;
   display: block;
-  background-image: url("../../img/comment.svg");
+  background-image: url("../img/comment.svg");
 }
 .seller__cards .comment__count,
 .sale__cards .comment__count {
