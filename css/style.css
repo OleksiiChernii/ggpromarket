@@ -708,8 +708,7 @@ li {
   background-color: #f3f9ff;
   background-image: url("../img/about.png");
   background-repeat: no-repeat;
-  background-position: top 50px left 190px;
-  z-index: 99;
+  background-position: bottom 129px left 190px;
 }
 .about__head {
   width: 1148px;
@@ -735,5 +734,5 @@ li {
   padding-top: 49px;
   padding-right: 109px;
   padding-bottom: 73px;
-  margin-left: auto;
+  margin-left: 390px;
 }
