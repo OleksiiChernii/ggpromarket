@@ -423,6 +423,45 @@ li {
   padding: 40px 190px;
   background-color: #f3f9ff;
 }
+.sale__wrapper,
+.seller__wrapper {
+  position: relative;
+}
+.sale__scroll,
+.seller__scroll {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sale__scroll .scroll__button,
+.seller__scroll .scroll__button {
+  width: 60px;
+  height: 60px;
+  background-color: #d5e0e5;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sale__scroll .scroll__button.back,
+.seller__scroll .scroll__button.back {
+  transform: translateX(-50%);
+}
+.sale__scroll .scroll__button.next,
+.seller__scroll .scroll__button.next {
+  transform: translateX(50%);
+}
+.sale__scroll .scroll__icon.back,
+.seller__scroll .scroll__icon.back {
+  transform: rotate(180deg);
+}
+
 .seller__cards,
 .sale__cards {
   display: flex;

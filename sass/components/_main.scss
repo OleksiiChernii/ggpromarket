@@ -124,6 +124,46 @@ $prime-background: #f3f9ff;
   }
 }
 
+.sale,
+.seller {
+  &__wrapper {
+    position: relative;
+  }
+  &__scroll {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .scroll__button {
+      width: 60px;
+      height: 60px;
+      background-color: #d5e0e5;
+      border: none;
+      border-radius: 5px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.back {
+        transform: translateX(-50%);
+      }
+      &.next {
+        transform: translateX(50%);
+      }
+    }
+
+    .scroll__icon.back {
+      transform: rotate(180deg);
+    }
+  }
+}
+
 .seller__cards,
 .sale__cards {
   display: flex;
@@ -285,7 +325,7 @@ $prime-background: #f3f9ff;
   .stars__item {
     width: 14px;
     height: 13px;
-    mask: url('../img/starr.svg') no-repeat center/contain;
+    mask: url("../img/starr.svg") no-repeat center/contain;
     background-color: #ffd600;
 
     &.half {
@@ -297,7 +337,7 @@ $prime-background: #f3f9ff;
     width: 13px;
     height: 13px;
     display: block;
-    background-image: url('../img/comment.svg');
+    background-image: url("../img/comment.svg");
   }
 
   .comment__count {
