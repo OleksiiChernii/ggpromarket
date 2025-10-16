@@ -728,6 +728,9 @@ li {
   line-height: 30px;
   color: white;
   background-color: #3bb9b8;
+  background-image: url("../img/about.png");
+  background-repeat: no-repeat;
+  background-position: bottom 79px left -390px;
   padding-left: 389px;
   padding-top: 49px;
   padding-right: 109px;
