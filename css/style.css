@@ -342,7 +342,7 @@ li {
   gap: 18px;
 }
 
-.brands__head, .sale__head, .seller__head, .collection__head {
+.articles__head, .brands__head, .sale__head, .seller__head, .collection__head {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -424,11 +424,13 @@ li {
   background-color: #f3f9ff;
 }
 .sale__wrapper,
-.seller__wrapper {
+.seller__wrapper,
+.articles__wrapper {
   position: relative;
 }
 .sale__scroll,
-.seller__scroll {
+.seller__scroll,
+.articles__scroll {
   position: absolute;
   top: 50%;
   left: 0;
@@ -439,7 +441,8 @@ li {
   justify-content: space-between;
 }
 .sale__scroll .scroll__button,
-.seller__scroll .scroll__button {
+.seller__scroll .scroll__button,
+.articles__scroll .scroll__button {
   width: 60px;
   height: 60px;
   background-color: #d5e0e5;
@@ -450,15 +453,18 @@ li {
   justify-content: center;
 }
 .sale__scroll .scroll__button.back,
-.seller__scroll .scroll__button.back {
-  transform: translateX(-50%);
+.seller__scroll .scroll__button.back,
+.articles__scroll .scroll__button.back {
+  transform: translateX(-20px);
 }
 .sale__scroll .scroll__button.next,
-.seller__scroll .scroll__button.next {
-  transform: translateX(50%);
+.seller__scroll .scroll__button.next,
+.articles__scroll .scroll__button.next {
+  transform: translateX(20px);
 }
 .sale__scroll .scroll__icon.back,
-.seller__scroll .scroll__icon.back {
+.seller__scroll .scroll__icon.back,
+.articles__scroll .scroll__icon.back {
   transform: rotate(180deg);
 }
 
@@ -664,4 +670,67 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.articles {
+  padding: 50px 190px;
+  background-color: #f3f9ff;
+}
+.articles__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.articles__item {
+  width: 370px;
+  height: 377px;
+  background-color: #fff;
+}
+.articles .thumb {
+  width: 100%;
+}
+.articles__img {
+  display: block;
+  width: 100%;
+  height: 247px;
+  object-fit: cover;
+}
+.articles__desc {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 30px 30px 0;
+}
+
+.about {
+  padding: 50px 190px;
+  background-color: #f3f9ff;
+  background-image: url("../img/about.png");
+  background-repeat: no-repeat;
+  background-position: top 50px left 190px;
+  z-index: 99;
+}
+.about__head {
+  width: 1148px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  padding-left: 390px;
+  padding-bottom: 38px;
+  padding-top: 24px;
+  margin-left: auto;
+}
+.about__desc {
+  width: 1148px;
+  font-size: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: white;
+  background-color: #3bb9b8;
+  padding-left: 389px;
+  padding-top: 49px;
+  padding-right: 109px;
+  padding-bottom: 73px;
+  margin-left: auto;
 }
