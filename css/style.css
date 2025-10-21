@@ -705,10 +705,8 @@ li {
 
 .about {
   padding: 50px 190px;
+  position: relative;
   background-color: #f3f9ff;
-  background-image: url("../img/about.png");
-  background-repeat: no-repeat;
-  background-position: bottom 129px left 190px;
 }
 .about__head {
   width: 1148px;
@@ -727,12 +725,17 @@ li {
   line-height: 30px;
   color: white;
   background-color: #3bb9b8;
-  background-image: url("../img/about.png");
-  background-repeat: no-repeat;
-  background-position: bottom 79px left -390px;
   padding-left: 389px;
   padding-top: 49px;
   padding-right: 109px;
   padding-bottom: 73px;
-  margin-left: 390px;
+  margin-left: auto;
+}
+.about::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-image: url("../img/about.png");
+  background-repeat: no-repeat;
+  background-position: bottom 129px left 190px;
 }

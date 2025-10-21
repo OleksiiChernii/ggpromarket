@@ -432,6 +432,7 @@ $prime-background: #f3f9ff;
 
 .about {
   padding: 50px 190px;
+  position: relative;
   background-color: $prime-background;
 
   &__head {
@@ -455,19 +456,20 @@ $prime-background: #f3f9ff;
     color: white;
     background-color: #3bb9b8;
 
-    background-image: url("../img/about.png");
-    background-repeat: no-repeat;
-    background-position: bottom 79px left -390px;
-
     padding-left: 389px;
     padding-top: 49px;
     padding-right: 109px;
     padding-bottom: 73px;
 
-    margin-left: 390px;
+    margin-left: auto;
   }
 
-  background-image: url("../img/about.png");
-  background-repeat: no-repeat;
-  background-position: bottom 129px left 190px;
+  &::after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-image: url("../img/about.png");
+    background-repeat: no-repeat;
+    background-position: bottom 129px left 190px;
+  }
 }
