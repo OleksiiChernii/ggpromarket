@@ -1,0 +1,60 @@
+.footer {
+  padding: 36px 190px;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  &__products,
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+  }
+
+  .products__link,
+  .nav__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #2b7bc6;
+  }
+
+  &__tel {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 40px;
+  }
+  &__button {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 15%;
+    text-transform: uppercase;
+    color: #1061ab;
+    border: 1px solid #1061ab;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 6px 13px;
+
+    margin: 18px 0;
+  }
+
+  &__hours {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  &__adress {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    font-style: normal;
+
+    .address__link {
+      color: #1061ab;
+    }
+  }
+}
